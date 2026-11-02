@@ -1,0 +1,90 @@
+========================================================================================================
+SEED-AGGREGATED SUMMARY  (2 configs)   ranked by final Class-IL (mean+/-std over ALL seeds)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 88.82+/-0.67  98.81+/-0.11      -      - 10  plast mode=- beta=- frac=- lam=-
+ 87.99+/-0.67  98.75+/-0.29      -      - 10  plast mode=- beta=- frac=- lam=-
+
+========================================================================================================
+BEST-50% SEEDS SUMMARY  (2 configs)   each config over its top-half seeds by Class-IL (mean+/-std)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 89.31+/-0.18  98.79+/-0.11      -      -  5  plast mode=- beta=- frac=- lam=-
+ 88.44+/-0.56  98.76+/-0.37      -      -  5  plast mode=- beta=- frac=- lam=-
+
+========================================================================================================
+WORST-50% SEEDS SUMMARY  (2 configs)   each config over its bottom-half seeds by Class-IL (mean+/-std)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 88.33+/-0.62  98.82+/-0.12      -      -  5  plast mode=- beta=- frac=- lam=-
+ 87.54+/-0.43  98.75+/-0.23      -      -  5  plast mode=- beta=- frac=- lam=-
+
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model clser --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --reg_weight 1.0 --stable_model_update_freq 0.8 --stable_model_alpha 0.99 --plastic_model_update_freq 1.0 --plastic_model_alpha 0.99
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.92 % 	 [Task-IL]: 99.92 %
+  Raw accuracy values @t1: Class-IL [99.91962174940896] | Task-IL [99.91962174940896]
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.1 % 	 [Task-IL]: 98.91 %
+  Raw accuracy values @t2: Class-IL [98.43498817966902, 97.68364348677768] | Task-IL [99.88179669030731, 97.94319294809010]
+  Accuracy for 3 task(s): 	 [Class-IL]: 95.38 % 	 [Task-IL]: 99.11 %
+  Raw accuracy values @t3: Class-IL [97.30023640661939, 90.10773751224291, 98.72998932764142] | Task-IL [99.89598108747045, 97.84524975514202, 99.59445037353255]
+  Accuracy for 4 task(s): 	 [Class-IL]: 93.71 % 	 [Task-IL]: 99.05 %
+  Raw accuracy values @t4: Class-IL [96.321513002364, 88.86875612144955, 91.62219850586979, 98.02114803625379] | Task-IL [99.8439716312057, 97.55142017629774, 99.10352187833513, 99.70292044310170]
+  Accuracy for 5 task(s): 	 [Class-IL]: 88.82 % 	 [Task-IL]: 98.8 %
+  Raw accuracy values @t5: Class-IL [94.6808510638298, 83.39373163565132, 78.56990394877269, 90.82578046324269, 96.62632375189108] | Task-IL [99.75886524822695, 97.32125367286974, 99.06616862326575, 99.64249748237664, 98.24508320726173]
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model gem --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --gamma 0.5
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.92 % 	 [Task-IL]: 99.92 %
+  Raw accuracy values @t1: Class-IL [99.9196217494090] | Task-IL [99.9196217494090]
+  Accuracy for 2 task(s): 	 [Class-IL]: 97.97 % 	 [Task-IL]: 98.99 %
+  Raw accuracy values @t2: Class-IL [98.26004728132386, 97.68364348677770] | Task-IL [99.91962174940898, 98.05093046033302]
+  Accuracy for 3 task(s): 	 [Class-IL]: 94.41 % 	 [Task-IL]: 99.04 %
+  Raw accuracy values @t3: Class-IL [95.70685579196217, 88.71694417238002, 98.79935965848452] | Task-IL [99.91962174940898, 97.61998041136141, 99.57844183564569]
+  Accuracy for 4 task(s): 	 [Class-IL]: 92.89 % 	 [Task-IL]: 98.97 %
+  Raw accuracy values @t4: Class-IL [95.74940898345156, 87.28207639569050, 90.03201707577374, 98.5196374622356] | Task-IL [99.8912529550827, 97.42409402546522, 98.7940234791889, 99.74823766364553]
+  Accuracy for 5 task(s): 	 [Class-IL]: 87.99 % 	 [Task-IL]: 98.75 %
+  Raw accuracy values @t5: Class-IL [93.46572104018914, 81.46914789422136, 79.53575240128069, 88.75125881168177, 96.75743822491177] | Task-IL [99.82978723404256, 97.29676787463271, 99.11953041622198, 99.39577039274926, 98.11901159858800]
+
+================================================================================================
+STATISTIC GLOSSARY (every line the runs log; values shown are seed means)
+  Accuracy for N task(s): [Class-IL] [Task-IL]
+      The headline. Class-IL = accuracy with NO task id at test (the hard
+      setting); Task-IL = accuracy given the task id. Printed after each of the
+      N seen tasks; the N=5 row is the final result.
+  Raw accuracy values: Class-IL [...] | Task-IL [...]
+      Per-task accuracy vector behind that mean (entry t = acc on task t). The
+      tell for head-collapse: [0,0,0,~s,~96] = only the last task survives.
+  Backward Transfer
+      Mean change in earlier tasks' accuracy after learning later ones
+      (negative = forgetting; ~0 = retained).
+  Forgetting
+      Mean drop from each task's PEAK accuracy to its final (higher = worse).
+  Forward Transfer
+      Zero-shot benefit on not-yet-seen tasks vs a random net (>0 = helps).
+  plast NCM ORACLE task T: [Class-IL] [Task-IL] | per-task CIL [...]
+      Head-FREE ceiling: nearest-class-mean on the current fc2 features. The
+      oracle-minus-head Class-IL gap localizes loss to the readout vs features.
+  plast PROBE task T: <layer>: mean std frozen plastic
+      Per-layer plasticity p map: mean/std, frozen fraction (p<freeze_thresh),
+      fully-plastic fraction (p>=target). How you SEE freezing vs lost plasticity.
+  plast GEO PROBE task T: deaths | <layer>: P+/-std barriers u_range eff_comp
+      Dendrite geometry: per-neuron mean plasticity P, barriers/neuron, mean
+      dendrite u-span, and EFFECTIVE compartments (kernel-disconnected breaks;
+      ~1 = geometry inert). deaths = neurons recycled this task.
+  plast DEATH task T: deaths | <layer>P
+      Neuron-recycle count this task + per-layer mean plasticity.
+  plast TURNOVER task T: <layer>: frozen ever new thaw p_froz p_plas p[.1/.5/.9] when
+      frozen = currently frozen frac; ever = ever-frozen frac; new = froze FIRST
+      this task; thaw = was frozen last boundary, plastic now (re-plasticized);
+      p_froz/p_plas = mean p among frozen vs still-plastic (freeze depth vs how
+      labile the rest are); p[.1/.5/.9] = plasticity percentiles; when = mean
+      within-task position of this task's fresh freezes (0=early, 1=late).
+

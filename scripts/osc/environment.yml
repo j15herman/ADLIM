@@ -1,0 +1,41 @@
+# Conda env for the Mammoth port + CLS-ER table replication on OSC.
+#
+#   conda env create -f environment.yml        # fresh env named consolidation-mammoth
+# or, to patch the EXISTING `consolidation` env instead (keeps your torch):
+#   conda activate consolidation
+#   pip install timm==0.9.8 kornia onedrivedownloader ftfy regex pyyaml tqdm \
+#               open_clip_torch pandas quadprog
+#
+# Notes:
+#  - torch/torchvision from PyPI ship CUDA wheels; if you need a specific
+#    CUDA toolkit match for the cluster, install torch first your usual way
+#    and remove it from the pip list below.
+#  - timm is PINNED to 0.9.8 (mammoth's vit.py imports private timm internals
+#    that moved in later versions).
+#  - open_clip_torch + pandas are needed only because mammoth imports every
+#    dataset file at startup (seq_8vision.py, seq_celeba.py). The first
+#    import downloads a CLIP ViT-B/16 checkpoint (~600 MB) into
+#    mammoth/checkpoints/ — run `python -c "import datasets"` once from the
+#    repo root on a login node so array jobs don't all race to download it.
+#  - quadprog is GEM's QP solver.
+name: consolidation-mammoth
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - torch>=2.1
+      - torchvision
+      - numpy
+      - Pillow
+      - timm==0.9.8
+      - kornia>=0.7.0
+      - onedrivedownloader
+      - ftfy
+      - regex
+      - pyyaml
+      - tqdm
+      - open_clip_torch
+      - pandas
+      - quadprog

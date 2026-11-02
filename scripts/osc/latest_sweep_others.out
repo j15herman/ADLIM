@@ -1,0 +1,108 @@
+========================================================================================================
+SEED-AGGREGATED SUMMARY  (3 configs)   ranked by final Class-IL (mean+/-std over ALL seeds)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 20.01+/-2.68  95.33+/-3.15      -      - 10  mas e_lambda=1.0
+ 19.95+/-0.01  96.19+/-2.71      -      - 10  plast mode=- beta=- frac=- lam=-
+ 19.95+/-0.02  96.59+/-4.43      -      - 10  plast mode=- beta=- frac=- lam=-
+
+========================================================================================================
+BEST-50% SEEDS SUMMARY  (3 configs)   each config over its top-half seeds by Class-IL (mean+/-std)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 22.05+/-2.03  96.19+/-1.90      -      -  5  mas e_lambda=1.0
+ 19.96+/-0.02  95.51+/-6.36      -      -  5  plast mode=- beta=- frac=- lam=-
+ 19.96+/-0.02  97.85+/-0.97      -      -  5  plast mode=- beta=- frac=- lam=-
+
+========================================================================================================
+WORST-50% SEEDS SUMMARY  (3 configs)   each config over its bottom-half seeds by Class-IL (mean+/-std)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 19.94+/-0.00  94.53+/-2.94      -      -  5  plast mode=- beta=- frac=- lam=-
+ 19.93+/-0.01  97.68+/-0.84      -      -  5  plast mode=- beta=- frac=- lam=-
+ 17.96+/-1.24  94.47+/-4.11      -      -  5  mas e_lambda=1.0
+
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model ewc_on --dataset seq-fmnist --lr 0.03 --e_lambda 90 --gamma 1.0 --batch_size 10 --n_epochs 1 --enable_other_metrics 1
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 97.98 % 	 [Task-IL]: 97.98 %
+  Raw accuracy values @t1: Class-IL [97.98] | Task-IL [97.98]
+  Accuracy for 2 task(s): 	 [Class-IL]: 48.36 % 	 [Task-IL]: 96.94 %
+  Raw accuracy values @t2: Class-IL [0.0, 96.72000000000000] | Task-IL [97.16, 96.72000000000000]
+  Accuracy for 3 task(s): 	 [Class-IL]: 33.9 % 	 [Task-IL]: 95.28 %
+  Raw accuracy values @t3: Class-IL [0.0, 1.7, 99.9] | Task-IL [90.22, 95.7, 99.9]
+  Accuracy for 4 task(s): 	 [Class-IL]: 25.00 % 	 [Task-IL]: 95.59 %
+  Raw accuracy values @t4: Class-IL [0.0, 0.0, 0.0, 99.97] | Task-IL [90.60500000000000, 92.06, 99.7, 99.97]
+  Accuracy for 5 task(s): 	 [Class-IL]: 19.95 % 	 [Task-IL]: 96.19 %
+  Raw accuracy values @t5: Class-IL [0.0, 0.0, 0.0, 0.0, 99.73] | Task-IL [89.0, 94.40, 98.05499999999999, 99.7, 99.73]
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model lwf --dataset seq-fmnist --lr 0.03 --alpha 1 --softmax_temp 2.0 --batch_size 10 --n_epochs 1 --optim_wd 0.0005 --enable_other_metrics 1
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 98.11 % 	 [Task-IL]: 98.11 %
+  Raw accuracy values @t1: Class-IL [98.11499999999999] | Task-IL [98.11499999999999]
+  Accuracy for 2 task(s): 	 [Class-IL]: 48.3 % 	 [Task-IL]: 97.27 %
+  Raw accuracy values @t2: Class-IL [0.0, 96.7] | Task-IL [97.9, 96.7]
+  Accuracy for 3 task(s): 	 [Class-IL]: 33.33 % 	 [Task-IL]: 98.05 %
+  Raw accuracy values @t3: Class-IL [0.0, 0.0, 100.0] | Task-IL [97.67, 96.53, 100.0]
+  Accuracy for 4 task(s): 	 [Class-IL]: 25.00 % 	 [Task-IL]: 97.78 %
+  Raw accuracy values @t4: Class-IL [0.0, 0.0, 0.0, 99.97] | Task-IL [94.7, 96.56500000000001, 99.9, 99.97]
+  Accuracy for 5 task(s): 	 [Class-IL]: 19.95 % 	 [Task-IL]: 96.59 %
+  Raw accuracy values @t5: Class-IL [0.0, 0.0, 0.0, 0.0, 99.7] | Task-IL [91.2, 92.17, 100.0, 99.97, 99.7]
+
+------------------------------------------------------------------------------------------------
+mas e_lambda=1.0   (n=10 seeds)
+  args: --model mas --dataset seq-mnist --lr 0.03 --e_lambda 1.0 --gamma 1.0 --batch_size 10 --n_epochs 1 --enable_other_metrics 1
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.92 % 	 [Task-IL]: 99.92 %
+  Raw accuracy values @t1: Class-IL [99.91962174940898] | Task-IL [99.91962174940898]
+  Accuracy for 2 task(s): 	 [Class-IL]: 65.76 % 	 [Task-IL]: 98.13 %
+  Raw accuracy values @t2: Class-IL [35.182033096926716, 96.33692458374144] | Task-IL [99.91489361702126, 96.34182174338885]
+  Accuracy for 3 task(s): 	 [Class-IL]: 35.33 % 	 [Task-IL]: 96.75 %
+  Raw accuracy values @t3: Class-IL [9.3, 3.2, 93.48986125933833] | Task-IL [99.87706855791961, 96.87071498530851, 93.48986125933833]
+  Accuracy for 4 task(s): 	 [Class-IL]: 29.00 % 	 [Task-IL]: 97.5 %
+  Raw accuracy values @t4: Class-IL [6.9, 0.2, 10.074706510138739, 98.86203423967774] | Task-IL [99.57446808510637, 95.63663075416258, 95.68836712913554, 99.02316213494460]
+  Accuracy for 5 task(s): 	 [Class-IL]: 20.01 % 	 [Task-IL]: 95.33 %
+  Raw accuracy values @t5: Class-IL [3.4, 0.3, 0.4, 7.5830815709969768, 88.39636913767019] | Task-IL [98.95035460992906, 96.57688540646424, 96.8356456776948, 95.68982880161128, 88.59808371154816]
+
+================================================================================================
+STATISTIC GLOSSARY (every line the runs log; values shown are seed means)
+  Accuracy for N task(s): [Class-IL] [Task-IL]
+      The headline. Class-IL = accuracy with NO task id at test (the hard
+      setting); Task-IL = accuracy given the task id. Printed after each of the
+      N seen tasks; the N=5 row is the final result.
+  Raw accuracy values: Class-IL [...] | Task-IL [...]
+      Per-task accuracy vector behind that mean (entry t = acc on task t). The
+      tell for head-collapse: [0,0,0,~s,~96] = only the last task survives.
+  Backward Transfer
+      Mean change in earlier tasks' accuracy after learning later ones
+      (negative = forgetting; ~0 = retained).
+  Forgetting
+      Mean drop from each task's PEAK accuracy to its final (higher = worse).
+  Forward Transfer
+      Zero-shot benefit on not-yet-seen tasks vs a random net (>0 = helps).
+  plast NCM ORACLE task T: [Class-IL] [Task-IL] | per-task CIL [...]
+      Head-FREE ceiling: nearest-class-mean on the current fc2 features. The
+      oracle-minus-head Class-IL gap localizes loss to the readout vs features.
+  plast PROBE task T: <layer>: mean std frozen plastic
+      Per-layer plasticity p map: mean/std, frozen fraction (p<freeze_thresh),
+      fully-plastic fraction (p>=target). How you SEE freezing vs lost plasticity.
+  plast GEO PROBE task T: deaths | <layer>: P+/-std barriers u_range eff_comp
+      Dendrite geometry: per-neuron mean plasticity P, barriers/neuron, mean
+      dendrite u-span, and EFFECTIVE compartments (kernel-disconnected breaks;
+      ~1 = geometry inert). deaths = neurons recycled this task.
+  plast DEATH task T: deaths | <layer>P
+      Neuron-recycle count this task + per-layer mean plasticity.
+  plast TURNOVER task T: <layer>: frozen ever new thaw p_froz p_plas p[.1/.5/.9] when
+      frozen = currently frozen frac; ever = ever-frozen frac; new = froze FIRST
+      this task; thaw = was frozen last boundary, plastic now (re-plasticized);
+      p_froz/p_plas = mean p among frozen vs still-plastic (freeze depth vs how
+      labile the rest are); p[.1/.5/.9] = plasticity percentiles; when = mean
+      within-task position of this task's fresh freezes (0=early, 1=late).
+

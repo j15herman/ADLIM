@@ -1,0 +1,198 @@
+========================================================================================================
+SEED-AGGREGATED SUMMARY  (8 configs)   ranked by final Class-IL (mean+/-std over ALL seeds)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 91.43+/-0.68  98.99+/-0.14      -      - 10  plast mode=- beta=- frac=- lam=-
+ 91.18+/-0.80  99.03+/-0.10      -      - 10  plast mode=- beta=- frac=- lam=-
+ 91.00+/-0.83  98.94+/-0.11      -      - 10  plast mode=- beta=- frac=- lam=-
+ 90.99+/-0.96  98.95+/-0.13      -      - 10  plast mode=- beta=- frac=- lam=-
+ 90.85+/-0.88  99.02+/-0.15      -      - 10  plast mode=- beta=- frac=- lam=-
+ 90.49+/-0.96  99.00+/-0.17      -      - 10  plast mode=- beta=- frac=- lam=-
+ 90.12+/-1.04  99.00+/-0.17      -      - 10  plast mode=- beta=- frac=- lam=-
+ 89.64+/-1.18  98.97+/-0.19      -      - 10  plast mode=- beta=- frac=- lam=-
+
+========================================================================================================
+BEST-50% SEEDS SUMMARY  (8 configs)   each config over its top-half seeds by Class-IL (mean+/-std)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 91.95+/-0.47  98.94+/-0.19      -      -  5  plast mode=- beta=- frac=- lam=-
+ 91.79+/-0.50  98.98+/-0.07      -      -  5  plast mode=- beta=- frac=- lam=-
+ 91.69+/-0.46  98.99+/-0.06      -      -  5  plast mode=- beta=- frac=- lam=-
+ 91.66+/-0.39  98.93+/-0.08      -      -  5  plast mode=- beta=- frac=- lam=-
+ 91.54+/-0.37  98.99+/-0.19      -      -  5  plast mode=- beta=- frac=- lam=-
+ 91.23+/-0.46  98.95+/-0.19      -      -  5  plast mode=- beta=- frac=- lam=-
+ 90.92+/-0.37  98.95+/-0.20      -      -  5  plast mode=- beta=- frac=- lam=-
+ 90.51+/-0.56  98.91+/-0.21      -      -  5  plast mode=- beta=- frac=- lam=-
+
+========================================================================================================
+WORST-50% SEEDS SUMMARY  (8 configs)   each config over its bottom-half seeds by Class-IL (mean+/-std)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 90.92+/-0.37  99.04+/-0.04      -      -  5  plast mode=- beta=- frac=- lam=-
+ 90.57+/-0.52  99.07+/-0.11      -      -  5  plast mode=- beta=- frac=- lam=-
+ 90.34+/-0.55  98.95+/-0.15      -      -  5  plast mode=- beta=- frac=- lam=-
+ 90.30+/-0.81  98.91+/-0.17      -      -  5  plast mode=- beta=- frac=- lam=-
+ 90.16+/-0.66  99.06+/-0.12      -      -  5  plast mode=- beta=- frac=- lam=-
+ 89.75+/-0.70  99.05+/-0.14      -      -  5  plast mode=- beta=- frac=- lam=-
+ 89.32+/-0.83  99.04+/-0.14      -      -  5  plast mode=- beta=- frac=- lam=-
+ 88.77+/-0.94  99.04+/-0.16      -      -  5  plast mode=- beta=- frac=- lam=-
+
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model derpp --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --alpha 0.1 --beta 0.5
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.92 % 	 [Task-IL]: 99.92 %
+  Raw accuracy values @t1: Class-IL [99.91489361702126] | Task-IL [99.91489361702126]
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.19 % 	 [Task-IL]: 99.11 %
+  Raw accuracy values @t2: Class-IL [98.30732860520094, 98.07051909892263] | Task-IL [99.90543735224585, 98.3055827619980]
+  Accuracy for 3 task(s): 	 [Class-IL]: 95.85 % 	 [Task-IL]: 99.29 %
+  Raw accuracy values @t3: Class-IL [97.69267139479906, 90.81292850146914, 99.03415154749200] | Task-IL [99.8817966903073, 98.27619980411362, 99.71718249733192]
+  Accuracy for 4 task(s): 	 [Class-IL]: 94.14 % 	 [Task-IL]: 99.20 %
+  Raw accuracy values @t4: Class-IL [96.76122931442082, 90.78844270323212, 90.76840981856991, 98.23766364551864] | Task-IL [99.8770685579196, 98.01665034280119, 99.15688367129135, 99.7432024169184]
+  Accuracy for 5 task(s): 	 [Class-IL]: 89.6 % 	 [Task-IL]: 98.97 %
+  Raw accuracy values @t5: Class-IL [95.39479905437352, 86.50342801175319, 79.93062966915689, 89.2799597180262, 97.08018154311648] | Task-IL [99.83451536643027, 97.59059745347697, 99.2049092849520, 99.59718026183283, 98.63338376197682]
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model derpp --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --alpha 0.1 --beta 1.0
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.93 % 	 [Task-IL]: 99.93 %
+  Raw accuracy values @t1: Class-IL [99.92907801418440] | Task-IL [99.92907801418440]
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.3 % 	 [Task-IL]: 99.15 %
+  Raw accuracy values @t2: Class-IL [98.40661938534279, 98.10969637610187] | Task-IL [99.91016548463357, 98.38883447600392]
+  Accuracy for 3 task(s): 	 [Class-IL]: 96.05 % 	 [Task-IL]: 99.33 %
+  Raw accuracy values @t3: Class-IL [97.7777777777778, 91.34671890303623, 99.02347918890074] | Task-IL [99.86288416075649, 98.36924583741430, 99.74386339381003]
+  Accuracy for 4 task(s): 	 [Class-IL]: 94.43 % 	 [Task-IL]: 99.24 %
+  Raw accuracy values @t4: Class-IL [97.02127659574467, 91.1410381978452, 91.31270010672360, 98.25780463242698] | Task-IL [99.86761229314421, 98.08031341821743, 99.25827107790822, 99.75327291037262]
+  Accuracy for 5 task(s): 	 [Class-IL]: 90.12 % 	 [Task-IL]: 99.00 %
+  Raw accuracy values @t5: Class-IL [95.853427895981, 86.70910871694419, 80.88580576307365, 90.0855991943605, 97.07009581442260] | Task-IL [99.85815602836878, 97.62487757100881, 99.24226254002136, 99.61228600201409, 98.6535552193646]
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model derpp --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --alpha 0.2 --beta 0.5
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.92 % 	 [Task-IL]: 99.92 %
+  Raw accuracy values @t1: Class-IL [99.91489361702126] | Task-IL [99.91489361702126]
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.27 % 	 [Task-IL]: 99.13 %
+  Raw accuracy values @t2: Class-IL [98.46335697399526, 98.08031341821744] | Task-IL [99.90543735224585, 98.34965719882467]
+  Accuracy for 3 task(s): 	 [Class-IL]: 96.23 % 	 [Task-IL]: 99.28 %
+  Raw accuracy values @t3: Class-IL [97.97163120567376, 91.80215475024485, 98.91141942369264] | Task-IL [99.88652482269505, 98.25661116552401, 99.71184631803628]
+  Accuracy for 4 task(s): 	 [Class-IL]: 94.60 % 	 [Task-IL]: 99.21 %
+  Raw accuracy values @t4: Class-IL [97.19621749408982, 91.41527913809988, 91.76093916755603, 98.01107754279960] | Task-IL [99.87706855791961, 97.96767874632715, 99.2315901814301, 99.75327291037260]
+  Accuracy for 5 task(s): 	 [Class-IL]: 90.49 % 	 [Task-IL]: 99.00 %
+  Raw accuracy values @t5: Class-IL [95.95744680851065, 87.16454456415281, 82.32123799359658, 90.20140986908361, 96.81290973272819] | Task-IL [99.8203309692671, 97.61018609206660, 99.27427961579509, 99.62235649546828, 98.6787695410994]
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model derpp --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --alpha 0.2 --beta 1.0
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.93 % 	 [Task-IL]: 99.93 %
+  Raw accuracy values @t1: Class-IL [99.92434988179669] | Task-IL [99.92434988179669]
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.33 % 	 [Task-IL]: 99.15 %
+  Raw accuracy values @t2: Class-IL [98.57683215130024, 98.08031341821743] | Task-IL [99.91489361702126, 98.38393731635651]
+  Accuracy for 3 task(s): 	 [Class-IL]: 96.33 % 	 [Task-IL]: 99.3 %
+  Raw accuracy values @t3: Class-IL [98.08037825059100, 92.00293829578844, 98.90074706510140] | Task-IL [99.87234042553192, 98.38393731635652, 99.7065101387407]
+  Accuracy for 4 task(s): 	 [Class-IL]: 94.76 % 	 [Task-IL]: 99.25 %
+  Raw accuracy values @t4: Class-IL [97.34278959810875, 91.66993143976494, 91.96371398078976, 98.07653575025176] | Task-IL [99.85342789598108, 98.08031341821744, 99.29028815368197, 99.76837865055388]
+  Accuracy for 5 task(s): 	 [Class-IL]: 90.8 % 	 [Task-IL]: 99.02 %
+  Raw accuracy values @t5: Class-IL [96.21276595744682, 87.73751224289911, 82.72145144076839, 90.88620342396777, 96.69692385274837] | Task-IL [99.84869976359337, 97.7815866797258, 99.21024546424761, 99.60725075528703, 98.66364094805849]
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model derpp --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --alpha 0.5 --beta 0.5
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.91 % 	 [Task-IL]: 99.91 %
+  Raw accuracy values @t1: Class-IL [99.91016548463355] | Task-IL [99.91016548463355]
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.4 % 	 [Task-IL]: 99.12 %
+  Raw accuracy values @t2: Class-IL [98.71394799054373, 98.03623898139080] | Task-IL [99.89598108747045, 98.35455435847209]
+  Accuracy for 3 task(s): 	 [Class-IL]: 96.47 % 	 [Task-IL]: 99.25 %
+  Raw accuracy values @t3: Class-IL [98.2600472813239, 92.53672869735553, 98.61792956243330] | Task-IL [99.87706855791961, 98.21253672869736, 99.66382070437565]
+  Accuracy for 4 task(s): 	 [Class-IL]: 94.94 % 	 [Task-IL]: 99.20 %
+  Raw accuracy values @t4: Class-IL [97.56501182033098, 91.92948090107738, 92.4386339381003, 97.81470292044310] | Task-IL [99.8770685579196, 97.91380999020569, 99.2529348986126, 99.7583081570997]
+  Accuracy for 5 task(s): 	 [Class-IL]: 90.99 % 	 [Task-IL]: 98.95 %
+  Raw accuracy values @t5: Class-IL [96.69030732860521, 88.04113614103819, 82.91889007470650, 90.81067472306142, 96.51033787191125] | Task-IL [99.82978723404256, 97.64936336924583, 99.18356456776947, 99.48640483383687, 98.59304084720121]
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model derpp --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --alpha 0.5 --beta 1.0
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.92 % 	 [Task-IL]: 99.92 %
+  Raw accuracy values @t1: Class-IL [99.91489361702126] | Task-IL [99.91489361702126]
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.47 % 	 [Task-IL]: 99.17 %
+  Raw accuracy values @t2: Class-IL [98.82269503546100, 98.10969637610187] | Task-IL [99.8959810874704, 98.45249755142018]
+  Accuracy for 3 task(s): 	 [Class-IL]: 96.51 % 	 [Task-IL]: 99.3 %
+  Raw accuracy values @t3: Class-IL [98.2222222222222, 92.65915768854063, 98.64461045891142] | Task-IL [99.8486997635934, 98.33496571988249, 99.6638207043757]
+  Accuracy for 4 task(s): 	 [Class-IL]: 95.01 % 	 [Task-IL]: 99.26 %
+  Raw accuracy values @t4: Class-IL [97.53664302600473, 91.99314397649363, 92.66808964781217, 97.83987915407855] | Task-IL [99.8676122931442, 98.15866797257591, 99.30629669156882, 99.72306143001008]
+  Accuracy for 5 task(s): 	 [Class-IL]: 91.18 % 	 [Task-IL]: 99.0 %
+  Raw accuracy values @t5: Class-IL [96.79905437352247, 88.15866797257590, 83.30843116328708, 91.01208459214502, 96.6061522945033] | Task-IL [99.83924349881795, 97.83055827619981, 99.29562433297758, 99.55186304128902, 98.60816944024205]
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model derpp --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --alpha 1.0 --beta 0.5
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.90 % 	 [Task-IL]: 99.90 %
+  Raw accuracy values @t1: Class-IL [99.89598108747043] | Task-IL [99.89598108747043]
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.4 % 	 [Task-IL]: 99.1 %
+  Raw accuracy values @t2: Class-IL [98.89834515366429, 97.91380999020569] | Task-IL [99.8959810874704, 98.25661116552399]
+  Accuracy for 3 task(s): 	 [Class-IL]: 96.54 % 	 [Task-IL]: 99.17 %
+  Raw accuracy values @t3: Class-IL [98.30732860520094, 92.84524975514202, 98.47385272145145] | Task-IL [99.87706855791961, 98.04603330068559, 99.58911419423693]
+  Accuracy for 4 task(s): 	 [Class-IL]: 95.01 % 	 [Task-IL]: 99.17 %
+  Raw accuracy values @t4: Class-IL [97.75886524822695, 92.00293829578843, 92.55602988260407, 97.73413897280967] | Task-IL [99.84397163120568, 97.91870714985308, 99.18890074706511, 99.73313192346426]
+  Accuracy for 5 task(s): 	 [Class-IL]: 91.00 % 	 [Task-IL]: 98.94 %
+  Raw accuracy values @t5: Class-IL [96.85579196217495, 88.36924583741430, 82.26787620064036, 91.067472306143, 96.44478063540092] | Task-IL [99.82033096926713, 97.76199804113614, 99.07150480256136, 99.54179254783486, 98.51235501765004]
+
+------------------------------------------------------------------------------------------------
+plast mode=- beta=- frac=- lam=-   (n=10 seeds)
+  args: --model derpp --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --buffer_size 500 --minibatch_size 10 --alpha 1.0 --beta 1.0
+------------------------------------------------------------------------------------------------
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.91 % 	 [Task-IL]: 99.91 %
+  Raw accuracy values @t1: Class-IL [99.90543735224585] | Task-IL [99.90543735224585]
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.47 % 	 [Task-IL]: 99.14 %
+  Raw accuracy values @t2: Class-IL [98.95981087470447, 97.97257590597454] | Task-IL [99.9054373522459, 98.37414299706171]
+  Accuracy for 3 task(s): 	 [Class-IL]: 96.58 % 	 [Task-IL]: 99.23 %
+  Raw accuracy values @t3: Class-IL [98.36879432624112, 92.84035259549462, 98.51654215581644] | Task-IL [99.87234042553192, 98.21743388834474, 99.5944503735326]
+  Accuracy for 4 task(s): 	 [Class-IL]: 95.23 % 	 [Task-IL]: 99.23 %
+  Raw accuracy values @t4: Class-IL [97.74940898345153, 92.3261508325171, 93.11099252934898, 97.71903323262841] | Task-IL [99.86288416075649, 98.07541625857003, 99.2582710779082, 99.73816717019135]
+  Accuracy for 5 task(s): 	 [Class-IL]: 91.43 % 	 [Task-IL]: 99.0 %
+  Raw accuracy values @t5: Class-IL [96.9929078014184, 88.56023506366306, 83.38313767342582, 91.80765357502518, 96.41956631366617] | Task-IL [99.83451536643025, 97.83055827619981, 99.15154749199573, 99.51158106747231, 98.6232980332829]
+
+================================================================================================
+STATISTIC GLOSSARY (every line the runs log; values shown are seed means)
+  Accuracy for N task(s): [Class-IL] [Task-IL]
+      The headline. Class-IL = accuracy with NO task id at test (the hard
+      setting); Task-IL = accuracy given the task id. Printed after each of the
+      N seen tasks; the N=5 row is the final result.
+  Raw accuracy values: Class-IL [...] | Task-IL [...]
+      Per-task accuracy vector behind that mean (entry t = acc on task t). The
+      tell for head-collapse: [0,0,0,~s,~96] = only the last task survives.
+  Backward Transfer
+      Mean change in earlier tasks' accuracy after learning later ones
+      (negative = forgetting; ~0 = retained).
+  Forgetting
+      Mean drop from each task's PEAK accuracy to its final (higher = worse).
+  Forward Transfer
+      Zero-shot benefit on not-yet-seen tasks vs a random net (>0 = helps).
+  plast NCM ORACLE task T: [Class-IL] [Task-IL] | per-task CIL [...]
+      Head-FREE ceiling: nearest-class-mean on the current fc2 features. The
+      oracle-minus-head Class-IL gap localizes loss to the readout vs features.
+  plast PROBE task T: <layer>: mean std frozen plastic
+      Per-layer plasticity p map: mean/std, frozen fraction (p<freeze_thresh),
+      fully-plastic fraction (p>=target). How you SEE freezing vs lost plasticity.
+  plast GEO PROBE task T: deaths | <layer>: P+/-std barriers u_range eff_comp
+      Dendrite geometry: per-neuron mean plasticity P, barriers/neuron, mean
+      dendrite u-span, and EFFECTIVE compartments (kernel-disconnected breaks;
+      ~1 = geometry inert). deaths = neurons recycled this task.
+  plast DEATH task T: deaths | <layer>P
+      Neuron-recycle count this task + per-layer mean plasticity.
+  plast TURNOVER task T: <layer>: frozen ever new thaw p_froz p_plas p[.1/.5/.9] when
+      frozen = currently frozen frac; ever = ever-frozen frac; new = froze FIRST
+      this task; thaw = was frozen last boundary, plastic now (re-plasticized);
+      p_froz/p_plas = mean p among frozen vs still-plastic (freeze depth vs how
+      labile the rest are); p[.1/.5/.9] = plasticity percentiles; when = mean
+      within-task position of this task's fresh freezes (0=early, 1=late).
+

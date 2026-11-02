@@ -1,0 +1,168 @@
+========================================================================================================
+SEED-AGGREGATED SUMMARY  (3 configs)   ranked by final Class-IL (mean+/-std over ALL seeds)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 91.80+/-0.40  98.67+/-0.21   90.0  0.104 10  plast clser=- clser_buffer_size=- clser_minibatch=- clser_plastic_alpha=- clser_plastic_update_freq=- clser_reg_weight=- clser_stable_alpha=- clser_stable_update_freq=- derpp=1 derpp_alpha=1.0 derpp_beta=0.5 derpp_buffer_size=500 derpp_minibatch=10 gem=- gem_buffer_size=- gem_gamma=-
+ 90.28+/-0.30  98.75+/-0.12   88.7  0.097 10  plast clser=- clser_buffer_size=- clser_minibatch=- clser_plastic_alpha=- clser_plastic_update_freq=- clser_reg_weight=- clser_stable_alpha=- clser_stable_update_freq=- derpp=- derpp_alpha=- derpp_beta=- derpp_buffer_size=- derpp_minibatch=- gem=1 gem_buffer_size=500 gem_gamma=0.5
+ 88.99+/-0.34  98.70+/-0.11   90.4  0.107 10  plast clser=1 clser_buffer_size=500 clser_minibatch=10 clser_plastic_alpha=0.99 clser_plastic_update_freq=1.0 clser_reg_weight=1.0 clser_stable_alpha=0.99 clser_stable_update_freq=0.8 derpp=- derpp_alpha=- derpp_beta=- derpp_buffer_size=- derpp_minibatch=- gem=- gem_buffer_size=- gem_gamma=-
+
+========================================================================================================
+BEST-50% SEEDS SUMMARY  (3 configs)   each config over its top-half seeds by Class-IL (mean+/-std)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 92.10+/-0.31  98.75+/-0.24   90.2  0.110  5  plast clser=- clser_buffer_size=- clser_minibatch=- clser_plastic_alpha=- clser_plastic_update_freq=- clser_reg_weight=- clser_stable_alpha=- clser_stable_update_freq=- derpp=1 derpp_alpha=1.0 derpp_beta=0.5 derpp_buffer_size=500 derpp_minibatch=10 gem=- gem_buffer_size=- gem_gamma=-
+ 90.50+/-0.21  98.68+/-0.12   88.4  0.090  5  plast clser=- clser_buffer_size=- clser_minibatch=- clser_plastic_alpha=- clser_plastic_update_freq=- clser_reg_weight=- clser_stable_alpha=- clser_stable_update_freq=- derpp=- derpp_alpha=- derpp_beta=- derpp_buffer_size=- derpp_minibatch=- gem=1 gem_buffer_size=500 gem_gamma=0.5
+ 89.28+/-0.20  98.62+/-0.09   90.4  0.110  5  plast clser=1 clser_buffer_size=500 clser_minibatch=10 clser_plastic_alpha=0.99 clser_plastic_update_freq=1.0 clser_reg_weight=1.0 clser_stable_alpha=0.99 clser_stable_update_freq=0.8 derpp=- derpp_alpha=- derpp_beta=- derpp_buffer_size=- derpp_minibatch=- gem=- gem_buffer_size=- gem_gamma=-
+
+========================================================================================================
+WORST-50% SEEDS SUMMARY  (3 configs)   each config over its bottom-half seeds by Class-IL (mean+/-std)
+  oracle = head-free NCM Class-IL ceiling on fc2 feats; fc1frz = fc1 ever-frozen fraction (final task)
+========================================================================================================
+     Class-IL       Task-IL  oracle  fc1frz  n  config
+ 91.50+/-0.21  98.60+/-0.17   89.7  0.098  5  plast clser=- clser_buffer_size=- clser_minibatch=- clser_plastic_alpha=- clser_plastic_update_freq=- clser_reg_weight=- clser_stable_alpha=- clser_stable_update_freq=- derpp=1 derpp_alpha=1.0 derpp_beta=0.5 derpp_buffer_size=500 derpp_minibatch=10 gem=- gem_buffer_size=- gem_gamma=-
+ 90.07+/-0.21  98.81+/-0.08   89.0  0.104  5  plast clser=- clser_buffer_size=- clser_minibatch=- clser_plastic_alpha=- clser_plastic_update_freq=- clser_reg_weight=- clser_stable_alpha=- clser_stable_update_freq=- derpp=- derpp_alpha=- derpp_beta=- derpp_buffer_size=- derpp_minibatch=- gem=1 gem_buffer_size=500 gem_gamma=0.5
+ 88.70+/-0.07  98.77+/-0.08   90.4  0.104  5  plast clser=1 clser_buffer_size=500 clser_minibatch=10 clser_plastic_alpha=0.99 clser_plastic_update_freq=1.0 clser_reg_weight=1.0 clser_stable_alpha=0.99 clser_stable_update_freq=0.8 derpp=- derpp_alpha=- derpp_beta=- derpp_buffer_size=- derpp_minibatch=- gem=- gem_buffer_size=- gem_gamma=-
+
+
+------------------------------------------------------------------------------------------------
+plast clser=- clser_buffer_size=- clser_minibatch=- clser_plastic_alpha=- clser_plastic_update_freq=- clser_reg_weight=- clser_stable_alpha=- clser_stable_update_freq=- derpp=1 derpp_alpha=1.0 derpp_beta=0.5 derpp_buffer_size=500 derpp_minibatch=10 gem=- gem_buffer_size=- gem_gamma=-   (n=10 seeds)
+  args: --model plasticity-mlp --plast_mlp 1 --plast_ncm_oracle 1 --plast_probe 1 --plast_geo_probe 1 --plast_turnover_probe 1 --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --plast_signal act_grad --plast_consistency mean --plast_beta 0.9975 --plast_lambda 160.0 --plast_lambda_end=-1.0 --plast_normalize 1 --plast_p_min 0.001 --plast_p_max 20.0 --plast_layers fc12 --plast_importance_mode accumulate --plast_accum_floor 0.0 --plast_accum_center 1 --plast_consol_stiffness 2.0 --plast_stiff_min 0.01 --plast_stiff_max 1000.0 --plast_lr_schedule cosine --plast_lr_min 0.0 --plast_warmup_epochs 0.0 --plast_spread 1.0 --plast_geometry conductance --plast_geo_sigma 0.02 --plast_geo_n_barriers 32 --plast_geo_barrier_height 8.0 --plast_geo_barrier_width 0.2 --plast_geo_bins 256 --plast_geo_every 1 --plast_geo_seed 0 --plast_death off --plast_death_thresh 0.3 --plast_death_window 100 --plast_death_warmup 500 --plast_death_rate_cap 0.05 --plast_death_relative 1 --plast_death_reset_outgoing 1 --plast_budget neuron --plast_budget_frac 0.2 --plast_budget_frac_end 0.4 --plast_head_consolidate past_blocks --plast_derpp 1 --plast_derpp_buffer_size 500 --plast_derpp_minibatch 10 --plast_derpp_alpha 1.0 --plast_derpp_beta 0.5
+------------------------------------------------------------------------------------------------
+  plast GEO PROBE task 0: deaths=0 | fc1: P=9.948±4.637 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=9.487±5.273 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 0: fc1: frozen=0.018 ever=0.043 new=0.043 thaw=0.000 p_froz=0.011 p_plas=10.137 p[.1/.5/.9]=0.39/2.90/20.00 when=0.06 | fc2: frozen=0.015 ever=0.044 new=0.044 thaw=0.000 p_froz=0.007 p_plas=9.630 p[.1/.5/.9]=0.41/1.00/20.00 when=0.03
+  plast NCM ORACLE task 0: [Class-IL] 99.92%  [Task-IL] 99.92%  | per-task CIL [99.92]
+  plast PROBE task 0: fc1: mean=9.948 std=9.696 frozen=0.018 plastic=0.545 | fc2: mean=9.487 std=9.650 frozen=0.015 plastic=0.595
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.93 % 	 [Task-IL]: 99.93 %
+  Raw accuracy values @t1: Class-IL [99.93380614657210] | Task-IL [99.93380614657210]
+  plast GEO PROBE task 1: deaths=0 | fc1: P=9.625±4.804 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=9.005±5.128 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 1: fc1: frozen=0.024 ever=0.048 new=0.005 thaw=0.000 p_froz=0.012 p_plas=9.860 p[.1/.5/.9]=0.35/1.00/20.00 when=0.64 | fc2: frozen=0.023 ever=0.057 new=0.013 thaw=0.003 p_froz=0.018 p_plas=9.216 p[.1/.5/.9]=0.38/1.00/20.00 when=0.59
+  plast NCM ORACLE task 1: [Class-IL] 98.14%  [Task-IL] 99.09%  | per-task CIL [99.30, 96.94]
+  plast PROBE task 1: fc1: mean=9.625 std=9.705 frozen=0.024 plastic=0.519 | fc2: mean=9.005 std=9.625 frozen=0.023 plastic=0.554
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.6 % 	 [Task-IL]: 99.32 %
+  Raw accuracy values @t2: Class-IL [98.79905437352247, 98.4867776689520] | Task-IL [99.9, 98.73163565132224]
+  plast GEO PROBE task 2: deaths=0 | fc1: P=9.427±4.855 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=8.513±5.057 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 2: fc1: frozen=0.041 ever=0.064 new=0.016 thaw=0.000 p_froz=0.021 p_plas=9.830 p[.1/.5/.9]=0.31/0.84/20.00 when=0.49 | fc2: frozen=0.031 ever=0.070 new=0.013 thaw=0.004 p_froz=0.011 p_plas=8.786 p[.1/.5/.9]=0.35/0.88/20.00 when=0.41
+  plast NCM ORACLE task 2: [Class-IL] 95.55%  [Task-IL] 98.64%  | per-task CIL [98.89, 91.91, 95.74]
+  plast PROBE task 2: fc1: mean=9.427 std=9.715 frozen=0.041 plastic=0.503 | fc2: mean=8.513 std=9.571 frozen=0.031 plastic=0.513
+  Accuracy for 3 task(s): 	 [Class-IL]: 96.61 % 	 [Task-IL]: 99.27 %
+  Raw accuracy values @t3: Class-IL [98.0898345153664, 93.0950048971597, 98.63927427961580] | Task-IL [99.8628841607565, 98.35945151811951, 99.57310565635004]
+  plast GEO PROBE task 3: deaths=0 | fc1: P=9.242±4.829 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=7.981±4.951 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 3: fc1: frozen=0.065 ever=0.089 new=0.025 thaw=0.004 p_froz=0.018 p_plas=9.887 p[.1/.5/.9]=0.25/0.61/20.00 when=0.46 | fc2: frozen=0.042 ever=0.083 new=0.014 thaw=0.004 p_froz=0.015 p_plas=8.336 p[.1/.5/.9]=0.31/0.55/20.00 when=0.51
+  plast NCM ORACLE task 3: [Class-IL] 93.45%  [Task-IL] 98.39%  | per-task CIL [98.70, 90.51, 91.80, 92.41]
+  plast PROBE task 3: fc1: mean=9.242 std=9.726 frozen=0.065 plastic=0.491 | fc2: mean=7.981 std=9.484 frozen=0.042 plastic=0.478
+  Accuracy for 4 task(s): 	 [Class-IL]: 95.11 % 	 [Task-IL]: 99.21 %
+  Raw accuracy values @t4: Class-IL [97.37115839243499, 91.94906953966699, 93.84738527214515, 97.28600201409868] | Task-IL [99.8345153664303, 98.10969637610188, 99.29562433297760, 99.60725075528703]
+  plast GEO PROBE task 4: deaths=0 | fc1: P=9.088±4.792 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=7.567±4.804 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 4: fc1: frozen=0.080 ever=0.104 new=0.015 thaw=0.003 p_froz=0.014 p_plas=9.877 p[.1/.5/.9]=0.19/0.56/20.00 when=0.51 | fc2: frozen=0.053 ever=0.096 new=0.013 thaw=0.003 p_froz=0.013 p_plas=7.987 p[.1/.5/.9]=0.25/0.50/20.00 when=0.51
+  plast NCM ORACLE task 4: [Class-IL] 89.95%  [Task-IL] 97.69%  | per-task CIL [97.85, 88.01, 85.37, 88.05, 89.77]
+  plast PROBE task 4: fc1: mean=9.088 std=9.735 frozen=0.080 plastic=0.483 | fc2: mean=7.567 std=9.402 frozen=0.053 plastic=0.452
+  Accuracy for 5 task(s): 	 [Class-IL]: 91.80 % 	 [Task-IL]: 98.67 %
+  Raw accuracy values @t5: Class-IL [96.97399527186761, 89.75024485798238, 88.03628601921025, 93.32326283987915, 90.90771558245083] | Task-IL [99.81560283687944, 97.89422135161605, 99.20490928495198, 99.34038267875127, 97.11548159354513]
+
+------------------------------------------------------------------------------------------------
+plast clser=1 clser_buffer_size=500 clser_minibatch=10 clser_plastic_alpha=0.99 clser_plastic_update_freq=1.0 clser_reg_weight=1.0 clser_stable_alpha=0.99 clser_stable_update_freq=0.8 derpp=- derpp_alpha=- derpp_beta=- derpp_buffer_size=- derpp_minibatch=- gem=- gem_buffer_size=- gem_gamma=-   (n=10 seeds)
+  args: --model plasticity-mlp --plast_mlp 1 --plast_ncm_oracle 1 --plast_probe 1 --plast_geo_probe 1 --plast_turnover_probe 1 --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --plast_signal act_grad --plast_consistency mean --plast_beta 0.9975 --plast_lambda 160.0 --plast_lambda_end=-1.0 --plast_normalize 1 --plast_p_min 0.001 --plast_p_max 20.0 --plast_layers fc12 --plast_importance_mode accumulate --plast_accum_floor 0.0 --plast_accum_center 1 --plast_consol_stiffness 2.0 --plast_stiff_min 0.01 --plast_stiff_max 1000.0 --plast_lr_schedule cosine --plast_lr_min 0.0 --plast_warmup_epochs 0.0 --plast_spread 1.0 --plast_geometry conductance --plast_geo_sigma 0.02 --plast_geo_n_barriers 32 --plast_geo_barrier_height 8.0 --plast_geo_barrier_width 0.2 --plast_geo_bins 256 --plast_geo_every 1 --plast_geo_seed 0 --plast_death off --plast_death_thresh 0.3 --plast_death_window 100 --plast_death_warmup 500 --plast_death_rate_cap 0.05 --plast_death_relative 1 --plast_death_reset_outgoing 1 --plast_budget neuron --plast_budget_frac 0.2 --plast_budget_frac_end 0.4 --plast_head_consolidate past_blocks --plast_clser 1 --plast_clser_buffer_size 500 --plast_clser_minibatch 10 --plast_clser_reg_weight 1.0 --plast_clser_stable_update_freq 0.8 --plast_clser_stable_alpha 0.99 --plast_clser_plastic_update_freq 1.0 --plast_clser_plastic_alpha 0.99
+------------------------------------------------------------------------------------------------
+  plast GEO PROBE task 0: deaths=0 | fc1: P=9.899±4.449 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=9.404±5.277 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 0: fc1: frozen=0.019 ever=0.046 new=0.046 thaw=0.000 p_froz=0.010 p_plas=10.094 p[.1/.5/.9]=0.41/2.90/20.00 when=0.08 | fc2: frozen=0.015 ever=0.045 new=0.045 thaw=0.000 p_froz=0.006 p_plas=9.547 p[.1/.5/.9]=0.41/1.00/20.00 when=0.05
+  plast NCM ORACLE task 0: [Class-IL] 99.92%  [Task-IL] 99.92%  | per-task CIL [99.92]
+  plast PROBE task 0: fc1: mean=9.899 std=9.697 frozen=0.019 plastic=0.543 | fc2: mean=9.404 std=9.641 frozen=0.015 plastic=0.588
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.94 % 	 [Task-IL]: 99.94 %
+  Raw accuracy values @t1: Class-IL [99.94326241134750] | Task-IL [99.94326241134750]
+  plast GEO PROBE task 1: deaths=0 | fc1: P=9.518±4.580 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=8.772±5.086 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 1: fc1: frozen=0.027 ever=0.052 new=0.006 thaw=0.001 p_froz=0.018 p_plas=9.786 p[.1/.5/.9]=0.35/1.00/20.00 when=0.69 | fc2: frozen=0.022 ever=0.059 new=0.014 thaw=0.004 p_froz=0.016 p_plas=8.972 p[.1/.5/.9]=0.38/1.00/20.00 when=0.59
+  plast NCM ORACLE task 1: [Class-IL] 98.38%  [Task-IL] 99.18%  | per-task CIL [98.82, 97.94]
+  plast PROBE task 1: fc1: mean=9.518 std=9.699 frozen=0.027 plastic=0.514 | fc2: mean=8.772 std=9.588 frozen=0.022 plastic=0.545
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.50 % 	 [Task-IL]: 99.32 %
+  Raw accuracy values @t2: Class-IL [98.46335697399527, 98.53574926542606] | Task-IL [99.89125295508275, 98.7414299706170]
+  plast GEO PROBE task 2: deaths=0 | fc1: P=9.290±4.604 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=8.237±5.014 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 2: fc1: frozen=0.041 ever=0.066 new=0.014 thaw=0.001 p_froz=0.017 p_plas=9.685 p[.1/.5/.9]=0.31/0.69/20.00 when=0.54 | fc2: frozen=0.030 ever=0.071 new=0.012 thaw=0.004 p_froz=0.012 p_plas=8.493 p[.1/.5/.9]=0.35/0.84/20.00 when=0.42
+  plast NCM ORACLE task 2: [Class-IL] 96.27%  [Task-IL] 99.10%  | per-task CIL [98.31, 93.16, 97.36]
+  plast PROBE task 2: fc1: mean=9.290 std=9.705 frozen=0.041 plastic=0.497 | fc2: mean=8.237 std=9.513 frozen=0.030 plastic=0.504
+  Accuracy for 3 task(s): 	 [Class-IL]: 95.97 % 	 [Task-IL]: 99.42 %
+  Raw accuracy values @t3: Class-IL [97.47044917257683, 91.45935357492654, 98.98078975453576] | Task-IL [99.8676122931442, 98.68266405484819, 99.69050160085378]
+  plast GEO PROBE task 3: deaths=0 | fc1: P=9.068±4.544 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=7.681±4.873 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 3: fc1: frozen=0.059 ever=0.087 new=0.021 thaw=0.004 p_froz=0.017 p_plas=9.645 p[.1/.5/.9]=0.26/0.60/20.00 when=0.45 | fc2: frozen=0.039 ever=0.084 new=0.013 thaw=0.005 p_froz=0.016 p_plas=7.990 p[.1/.5/.9]=0.30/0.54/20.00 when=0.52
+  plast NCM ORACLE task 3: [Class-IL] 94.46%  [Task-IL] 98.88%  | per-task CIL [97.94, 91.42, 93.94, 94.36]
+  plast PROBE task 3: fc1: mean=9.068 std=9.709 frozen=0.059 plastic=0.483 | fc2: mean=7.681 std=9.404 frozen=0.038 plastic=0.471
+  Accuracy for 4 task(s): 	 [Class-IL]: 94.26 % 	 [Task-IL]: 99.2 %
+  Raw accuracy values @t4: Class-IL [96.48699763593382, 89.88246816846228, 92.8655282817503, 97.79456193353475] | Task-IL [99.8392434988180, 98.29089128305583, 99.25827107790820, 99.57703927492449]
+  plast GEO PROBE task 4: deaths=0 | fc1: P=8.877±4.475 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=7.242±4.708 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 4: fc1: frozen=0.079 ever=0.107 new=0.019 thaw=0.002 p_froz=0.016 p_plas=9.645 p[.1/.5/.9]=0.19/0.51/20.00 when=0.44 | fc2: frozen=0.053 ever=0.097 new=0.013 thaw=0.003 p_froz=0.016 p_plas=7.644 p[.1/.5/.9]=0.26/0.50/20.00 when=0.55
+  plast NCM ORACLE task 4: [Class-IL] 90.41%  [Task-IL] 98.21%  | per-task CIL [96.58, 88.72, 88.14, 90.56, 87.56]
+  plast PROBE task 4: fc1: mean=8.877 std=9.712 frozen=0.079 plastic=0.473 | fc2: mean=7.242 std=9.300 frozen=0.053 plastic=0.445
+  Accuracy for 5 task(s): 	 [Class-IL]: 88.99 % 	 [Task-IL]: 98.70 %
+  Raw accuracy values @t5: Class-IL [95.04491725768322, 85.38197845249753, 78.99679829242262, 91.5357502517623, 93.98890569843670] | Task-IL [99.78723404255319, 98.05582761998042, 99.32764140875133, 99.47633434038269, 96.82299546142210]
+
+------------------------------------------------------------------------------------------------
+plast clser=- clser_buffer_size=- clser_minibatch=- clser_plastic_alpha=- clser_plastic_update_freq=- clser_reg_weight=- clser_stable_alpha=- clser_stable_update_freq=- derpp=- derpp_alpha=- derpp_beta=- derpp_buffer_size=- derpp_minibatch=- gem=1 gem_buffer_size=500 gem_gamma=0.5   (n=10 seeds)
+  args: --model plasticity-mlp --plast_mlp 1 --plast_ncm_oracle 1 --plast_probe 1 --plast_geo_probe 1 --plast_turnover_probe 1 --dataset seq-mnist --backbone mnistmlp --optimizer sgd --lr 0.03 --batch_size 10 --n_epochs 1 --enable_other_metrics 1 --plast_signal act_grad --plast_consistency mean --plast_beta 0.9975 --plast_lambda 160.0 --plast_lambda_end=-1.0 --plast_normalize 1 --plast_p_min 0.001 --plast_p_max 20.0 --plast_layers fc12 --plast_importance_mode accumulate --plast_accum_floor 0.0 --plast_accum_center 1 --plast_consol_stiffness 2.0 --plast_stiff_min 0.01 --plast_stiff_max 1000.0 --plast_lr_schedule cosine --plast_lr_min 0.0 --plast_warmup_epochs 0.0 --plast_spread 1.0 --plast_geometry conductance --plast_geo_sigma 0.02 --plast_geo_n_barriers 32 --plast_geo_barrier_height 8.0 --plast_geo_barrier_width 0.2 --plast_geo_bins 256 --plast_geo_every 1 --plast_geo_seed 0 --plast_death off --plast_death_thresh 0.3 --plast_death_window 100 --plast_death_warmup 500 --plast_death_rate_cap 0.05 --plast_death_relative 1 --plast_death_reset_outgoing 1 --plast_budget neuron --plast_budget_frac 0.2 --plast_budget_frac_end 0.4 --plast_head_consolidate past_blocks --plast_gem 1 --plast_gem_buffer_size 500 --plast_gem_gamma 0.5
+------------------------------------------------------------------------------------------------
+  plast GEO PROBE task 0: deaths=0 | fc1: P=9.502±4.228 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=8.677±5.282 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 0: fc1: frozen=0.015 ever=0.048 new=0.048 thaw=0.000 p_froz=0.011 p_plas=9.647 p[.1/.5/.9]=0.43/1.00/20.00 when=0.06 | fc2: frozen=0.010 ever=0.046 new=0.046 thaw=0.000 p_froz=0.006 p_plas=8.763 p[.1/.5/.9]=0.41/1.00/20.00 when=0.02
+  plast NCM ORACLE task 0: [Class-IL] 99.91%  [Task-IL] 99.91%  | per-task CIL [99.91]
+  plast PROBE task 0: fc1: mean=9.502 std=9.666 frozen=0.015 plastic=0.528 | fc2: mean=8.677 std=9.535 frozen=0.010 plastic=0.568
+  Accuracy for 1 task(s): 	 [Class-IL]: 99.92 % 	 [Task-IL]: 99.92 %
+  Raw accuracy values @t1: Class-IL [99.92434988179669] | Task-IL [99.92434988179669]
+  plast GEO PROBE task 1: deaths=0 | fc1: P=9.141±4.325 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=8.046±5.167 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 1: fc1: frozen=0.019 ever=0.052 new=0.005 thaw=0.001 p_froz=0.012 p_plas=9.317 p[.1/.5/.9]=0.39/0.74/20.00 when=0.66 | fc2: frozen=0.022 ever=0.064 new=0.018 thaw=0.002 p_froz=0.024 p_plas=8.228 p[.1/.5/.9]=0.40/0.97/20.00 when=0.53
+  plast NCM ORACLE task 1: [Class-IL] 97.75%  [Task-IL] 99.00%  | per-task CIL [99.22, 96.23]
+  plast PROBE task 1: fc1: mean=9.141 std=9.657 frozen=0.019 plastic=0.498 | fc2: mean=8.046 std=9.432 frozen=0.022 plastic=0.515
+  Accuracy for 2 task(s): 	 [Class-IL]: 98.42 % 	 [Task-IL]: 99.34 %
+  Raw accuracy values @t2: Class-IL [98.22695035460991, 98.60920666013712] | Task-IL [99.88179669030733, 98.7952987267385]
+  plast GEO PROBE task 2: deaths=0 | fc1: P=8.917±4.328 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=7.410±5.104 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 2: fc1: frozen=0.031 ever=0.064 new=0.011 thaw=0.001 p_froz=0.019 p_plas=9.204 p[.1/.5/.9]=0.34/0.59/20.00 when=0.50 | fc2: frozen=0.028 ever=0.075 new=0.011 thaw=0.006 p_froz=0.016 p_plas=7.622 p[.1/.5/.9]=0.39/0.60/20.00 when=0.41
+  plast NCM ORACLE task 2: [Class-IL] 95.43%  [Task-IL] 98.99%  | per-task CIL [98.19, 91.59, 96.50]
+  plast PROBE task 2: fc1: mean=8.917 std=9.656 frozen=0.031 plastic=0.479 | fc2: mean=7.410 std=9.279 frozen=0.028 plastic=0.472
+  Accuracy for 3 task(s): 	 [Class-IL]: 94.80 % 	 [Task-IL]: 99.34 %
+  Raw accuracy values @t3: Class-IL [96.2884160756501, 88.63858961802154, 99.47171824973319] | Task-IL [99.85815602836878, 98.38393731635651, 99.77588046958378]
+  plast GEO PROBE task 3: deaths=0 | fc1: P=8.700±4.231 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=6.736±4.898 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 3: fc1: frozen=0.050 ever=0.084 new=0.020 thaw=0.003 p_froz=0.022 p_plas=9.160 p[.1/.5/.9]=0.28/0.53/20.00 when=0.52 | fc2: frozen=0.035 ever=0.090 new=0.015 thaw=0.007 p_froz=0.018 p_plas=6.976 p[.1/.5/.9]=0.34/0.54/20.00 when=0.49
+  plast NCM ORACLE task 3: [Class-IL] 93.05%  [Task-IL] 98.81%  | per-task CIL [97.85, 88.78, 92.44, 92.91]
+  plast PROBE task 3: fc1: mean=8.700 std=9.655 frozen=0.050 plastic=0.466 | fc2: mean=6.736 std=9.072 frozen=0.035 plastic=0.435
+  Accuracy for 4 task(s): 	 [Class-IL]: 93.01 % 	 [Task-IL]: 99.12 %
+  Raw accuracy values @t4: Class-IL [95.58865248226951, 87.1596474045054, 90.72038420490928, 98.55991943605235] | Task-IL [99.8345153664303, 97.9970617042116, 98.93276414087514, 99.69788519637463]
+  plast GEO PROBE task 4: deaths=0 | fc1: P=8.494±4.112 barriers=32 u_range=54.68 eff_comp=577.10 | fc2: P=6.179±4.690 barriers=32 u_range=52.92 eff_comp=95.99
+  plast TURNOVER task 4: fc1: frozen=0.064 ever=0.097 new=0.013 thaw=0.002 p_froz=0.016 p_plas=9.077 p[.1/.5/.9]=0.22/0.48/20.00 when=0.52 | fc2: frozen=0.037 ever=0.100 new=0.010 thaw=0.009 p_froz=0.017 p_plas=6.414 p[.1/.5/.9]=0.30/0.50/20.00 when=0.51
+  plast NCM ORACLE task 4: [Class-IL] 88.68%  [Task-IL] 98.24%  | per-task CIL [97.44, 86.76, 86.22, 89.69, 82.64]
+  plast PROBE task 4: fc1: mean=8.494 std=9.650 frozen=0.064 plastic=0.456 | fc2: mean=6.179 std=8.863 frozen=0.036 plastic=0.404
+  Accuracy for 5 task(s): 	 [Class-IL]: 90.28 % 	 [Task-IL]: 98.75 %
+  Raw accuracy values @t5: Class-IL [95.48936170212765, 84.93633692458374, 84.82924226254002, 92.20040281973817, 93.96369137670196] | Task-IL [99.84397163120568, 97.77668952007835, 99.17822838847385, 99.33534743202418, 97.60463943519918]
+
+================================================================================================
+STATISTIC GLOSSARY (every line the runs log; values shown are seed means)
+  Accuracy for N task(s): [Class-IL] [Task-IL]
+      The headline. Class-IL = accuracy with NO task id at test (the hard
+      setting); Task-IL = accuracy given the task id. Printed after each of the
+      N seen tasks; the N=5 row is the final result.
+  Raw accuracy values: Class-IL [...] | Task-IL [...]
+      Per-task accuracy vector behind that mean (entry t = acc on task t). The
+      tell for head-collapse: [0,0,0,~s,~96] = only the last task survives.
+  Backward Transfer
+      Mean change in earlier tasks' accuracy after learning later ones
+      (negative = forgetting; ~0 = retained).
+  Forgetting
+      Mean drop from each task's PEAK accuracy to its final (higher = worse).
+  Forward Transfer
+      Zero-shot benefit on not-yet-seen tasks vs a random net (>0 = helps).
+  plast NCM ORACLE task T: [Class-IL] [Task-IL] | per-task CIL [...]
+      Head-FREE ceiling: nearest-class-mean on the current fc2 features. The
+      oracle-minus-head Class-IL gap localizes loss to the readout vs features.
+  plast PROBE task T: <layer>: mean std frozen plastic
+      Per-layer plasticity p map: mean/std, frozen fraction (p<freeze_thresh),
+      fully-plastic fraction (p>=target). How you SEE freezing vs lost plasticity.
+  plast GEO PROBE task T: deaths | <layer>: P+/-std barriers u_range eff_comp
+      Dendrite geometry: per-neuron mean plasticity P, barriers/neuron, mean
+      dendrite u-span, and EFFECTIVE compartments (kernel-disconnected breaks;
+      ~1 = geometry inert). deaths = neurons recycled this task.
+  plast DEATH task T: deaths | <layer>P
+      Neuron-recycle count this task + per-layer mean plasticity.
+  plast TURNOVER task T: <layer>: frozen ever new thaw p_froz p_plas p[.1/.5/.9] when
+      frozen = currently frozen frac; ever = ever-frozen frac; new = froze FIRST
+      this task; thaw = was frozen last boundary, plastic now (re-plasticized);
+      p_froz/p_plas = mean p among frozen vs still-plastic (freeze depth vs how
+      labile the rest are); p[.1/.5/.9] = plasticity percentiles; when = mean
+      within-task position of this task's fresh freezes (0=early, 1=late).
+
